@@ -237,7 +237,7 @@ class SettingsManager implements SettingsManagerInterface
             }
             
             $setting->setValue($this->serializer->serialize($value));
-            $this->eventDispatcher->dispatch('setting.updated', new SettingUpdateEvent($setting));
+            $this->eventDispatcher->dispatch('setting.updated', new SettingUpdateEvent($setting,$this));
         }
         
         $this->em->flush();
