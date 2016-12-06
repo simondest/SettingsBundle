@@ -22,9 +22,12 @@ class SettingUpdateEvent extends Event
         $this->settingManager = $settingManager;
     }
 
-    public function getSetting()
+    public function getSettingValue()
     {
         return $this->settingManager->get($this->setting->getName());
+    }
+    public function getSettingName(){
+        return $this->setting->getName();
     }
 }
 
