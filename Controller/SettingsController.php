@@ -103,8 +103,8 @@ class SettingsController extends Controller
                 $this->get('session')->getFlashBag()->add(
                     'success',
                     $this->get('translator')->trans('settings_updated', array(), 'settings')
-                );
-
+                );                
+                
                 return $this->redirect($request->getUri());
             }
         }
